@@ -1,6 +1,6 @@
 {
   "name": "compcrafter",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Elevate Your React Skills by Building Components from the Ground Up",
   "publishConfig": {
     "access": "public"
