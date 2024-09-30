@@ -1,3 +1,5 @@
+## CompCrafter
+
 **CompCrafter** is designed to help developers become proficient in React by building functional, reusable components from the ground up, focusing on both foundational concepts and best practices. Each component is carefully built to focus on the core concepts of React while promoting good practices. The library includes various resources for each component, ranging from YouTube videos to detailed articles compiled from multiple sources, offering in-depth learning and practical guidance.
 
 This is not just a component library — it’s a learning tool designed to make mastering React easy and fun, with a wide range of educational resources and practical examples for each component.
