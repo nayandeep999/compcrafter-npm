@@ -28,4 +28,12 @@ interface CarouselProps {
 
 declare function Carousel({ children, size, autoSlide, autoSlideInterval, }: CarouselProps): react_jsx_runtime.JSX.Element;
 
-export { Accordian, AccordianItem, type AccordianItemProps, type AccordianProps, Carousel, type CarouselProps, TodoList };
+interface ModalProps {
+    open: boolean;
+    onClose: () => void;
+    children: ReactNode;
+}
+
+declare function Modal({ open, onClose, children }: ModalProps): react_jsx_runtime.JSX.Element;
+
+export { Accordian, AccordianItem, type AccordianItemProps, type AccordianProps, Carousel, type CarouselProps, Modal, type ModalProps, TodoList };
