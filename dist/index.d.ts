@@ -1,4 +1,4 @@
-import React$1, { ReactNode, HTMLAttributes } from 'react';
+import React$1, { ReactNode, HTMLAttributes, ChangeEvent } from 'react';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 
 interface AccordianProps {
@@ -36,4 +36,28 @@ interface ModalProps {
 
 declare function Modal({ open, onClose, children }: ModalProps): react_jsx_runtime.JSX.Element;
 
-export { Accordian, AccordianItem, type AccordianItemProps, type AccordianProps, Carousel, type CarouselProps, Modal, type ModalProps, TodoList };
+interface PlanSelectorContextType {
+    value: string | number;
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+}
+interface PlanSelectorGroupProps {
+    value: string | number;
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+    children: ReactNode;
+}
+interface PlanSelectorProps extends React.InputHTMLAttributes<HTMLInputElement> {
+    children: ReactNode;
+    value: string | number;
+}
+interface PlanProps {
+    icon: ReactNode;
+    title: string;
+    features: string[];
+    price: number;
+}
+
+declare function PlanSelectorGroup({ value, onChange, children, }: PlanSelectorGroupProps): react_jsx_runtime.JSX.Element;
+declare function PlanSelector({ children, ...props }: PlanSelectorProps): react_jsx_runtime.JSX.Element;
+declare function Plan({ icon, title, features, price }: PlanProps): react_jsx_runtime.JSX.Element;
+
+export { Accordian, AccordianItem, type AccordianItemProps, type AccordianProps, Carousel, type CarouselProps, Modal, type ModalProps, Plan, type PlanProps, PlanSelector, type PlanSelectorContextType, PlanSelectorGroup, type PlanSelectorGroupProps, type PlanSelectorProps, TodoList };
