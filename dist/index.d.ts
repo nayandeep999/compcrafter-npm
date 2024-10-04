@@ -60,4 +60,20 @@ declare function PlanSelectorGroup({ value, onChange, children, }: PlanSelectorG
 declare function PlanSelector({ children, ...props }: PlanSelectorProps): react_jsx_runtime.JSX.Element;
 declare function Plan({ icon, title, features, price }: PlanProps): react_jsx_runtime.JSX.Element;
 
-export { Accordian, AccordianItem, type AccordianItemProps, type AccordianProps, Carousel, type CarouselProps, Modal, type ModalProps, Plan, type PlanProps, PlanSelector, type PlanSelectorContextType, PlanSelectorGroup, type PlanSelectorGroupProps, type PlanSelectorProps, TodoList };
+interface SidebarContextType {
+    expanded: boolean;
+}
+interface SidebarProps {
+    children: ReactNode;
+}
+interface SidebarItemProps {
+    icon: ReactNode;
+    text: string;
+    active?: boolean;
+    alert?: boolean;
+}
+
+declare function Sidebar({ children }: SidebarProps): react_jsx_runtime.JSX.Element;
+declare function SidebarItem({ icon, text, active, alert, }: SidebarItemProps): react_jsx_runtime.JSX.Element;
+
+export { Accordian, AccordianItem, type AccordianItemProps, type AccordianProps, Carousel, type CarouselProps, Modal, type ModalProps, Plan, type PlanProps, PlanSelector, type PlanSelectorContextType, PlanSelectorGroup, type PlanSelectorGroupProps, type PlanSelectorProps, Sidebar, type SidebarContextType, SidebarItem, type SidebarItemProps, type SidebarProps, TodoList };
