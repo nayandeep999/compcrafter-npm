@@ -1,4 +1,5 @@
-import React$1, { ReactNode, HTMLAttributes, ChangeEvent } from 'react';
+import * as React$1 from 'react';
+import React__default, { ReactNode, HTMLAttributes, ChangeEvent } from 'react';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 
 interface AccordianProps {
@@ -14,8 +15,8 @@ interface AccordianItemProps extends HTMLAttributes<HTMLLIElement> {
     className?: string;
 }
 
-declare const Accordian: React$1.FC<AccordianProps>;
-declare const AccordianItem: React$1.FC<AccordianItemProps>;
+declare const Accordian: React__default.FC<AccordianProps>;
+declare const AccordianItem: React__default.FC<AccordianItemProps>;
 
 declare const TodoList: () => react_jsx_runtime.JSX.Element;
 
@@ -76,4 +77,20 @@ interface SidebarItemProps {
 declare function Sidebar({ children }: SidebarProps): react_jsx_runtime.JSX.Element;
 declare function SidebarItem({ icon, text, active, alert, }: SidebarItemProps): react_jsx_runtime.JSX.Element;
 
-export { Accordian, AccordianItem, type AccordianItemProps, type AccordianProps, Carousel, type CarouselProps, Modal, type ModalProps, Plan, type PlanProps, PlanSelector, type PlanSelectorContextType, PlanSelectorGroup, type PlanSelectorGroupProps, type PlanSelectorProps, Sidebar, type SidebarContextType, SidebarItem, type SidebarItemProps, type SidebarProps, TodoList };
+interface DropdownProps {
+    children: React.ReactNode;
+    trigger: React.ReactNode;
+}
+interface DropdownItemProps {
+    children: React.ReactNode;
+}
+interface UseClickOutsideHookProps {
+    callbackFn: () => void;
+}
+
+declare const Dropdown: ({ children, trigger }: DropdownProps) => react_jsx_runtime.JSX.Element;
+declare function DropdownItem({ children }: DropdownItemProps): react_jsx_runtime.JSX.Element;
+
+declare function useClickOutsideHook({ callbackFn }: UseClickOutsideHookProps): React$1.MutableRefObject<HTMLDivElement | null>;
+
+export { Accordian, AccordianItem, type AccordianItemProps, type AccordianProps, Carousel, type CarouselProps, Dropdown, DropdownItem, type DropdownItemProps, type DropdownProps, Modal, type ModalProps, Plan, type PlanProps, PlanSelector, type PlanSelectorContextType, PlanSelectorGroup, type PlanSelectorGroupProps, type PlanSelectorProps, Sidebar, type SidebarContextType, SidebarItem, type SidebarItemProps, type SidebarProps, TodoList, type UseClickOutsideHookProps, useClickOutsideHook };
